@@ -1,7 +1,16 @@
-import React from "react";
-
-const Search = () => {
-  return <div>Search</div>;
+const Search = ({ search, setSearch, handleSearch }) => {
+  return (
+    <div className="search-engine">
+      <input
+        type="text"
+        name="search"
+        placeholder="Enter City Name"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <button onClick={handleSearch}>Search Weather</button>
+    </div>
+  );
 };
 
 export default Search;
