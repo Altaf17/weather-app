@@ -16,8 +16,9 @@ const Weather = () => {
     try {
       setloading(true);
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=4df9b21acb50ba7c42a6ff0f389a2b01`
+        `https://api.openweathermap.org/data/2.5/weather?q=${param}&appid= use your own key here`
       );
+      // check out this url for Api key = https://openweathermap.org/api
       const result = await response.json();
 
       setWeatherData(result);
